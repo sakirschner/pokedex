@@ -1,13 +1,289 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+  padding-top: 20px;
+  background-color: #09a8ff;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#small-btn {
+  font-size: 8px;
+  width: 70px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokedex-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokedex-container-left {
+  width: 300px;
+  background: #e61515;
+  padding: 15px;
+  display: inline-block;
+}
+
+#pokedex-container-right {
+  width: 300px;
+  background: #e61515;
+  padding: 15px;
+  display: inline-block;
+}
+
+#name-screen {
+  background-color: #2cf4f4;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#name-screen > p,
+h1 {
+  margin: 0;
+  font-size: 12px;
+}
+
+#main-screen {
+  background-color: #2cf4f4;
+  margin: 15px auto;
+}
+
+.sprite {
+  width: 200px;
+  margin: auto;
+  display: flex;
+}
+
+#description {
+  background-color: #2cf4f4;
+  padding: 15px;
+  margin: 10px 0;
+  height: 175px;
+}
+
+#description > p {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+#input {
+  width: 85px;
+  font-size: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats > p {
+  font-size: 8px;
+  margin: 0;
+}
+
+#stats {
+  background-color: #2cf4f4;
+  padding: 15px;
+}
+
+.center {
+  text-align: center;
+  font-size: 10px;
+}
+
+.types-container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.types {
+  width: 50% !important;
+  height: 25px;
+}
+
+.types > p {
+  font-size: 10px;
+  margin-top: -9px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.evo-container {
+  width: 32%;
+}
+
+.evo-img {
+  background-color: #2cf4f4;
+  padding: 0 !important;
+  height: 80px;
+}
+
+.evo-name {
+  background-color: #2cf4f4;
+  font-size: 7px;
+  margin-top: 5px;
+  height: 30px;
+  display: flex;
+  padding: 5px !important;
+  justify-content: center;
+}
+
+.evo-sprite {
+  width: 75px;
+  margin: auto;
+  display: flex;
+}
+
+.pokeball {
+  width: 50px;
+  margin: auto;
+  display: flex;
+  padding-top: 10px;
+}
+
+.evo-numbers {
+  display: flex !important;
+  justify-content: space-between !important;
+  background-color: #2cf4f4 !important;
+  font-size: 10px;
+  height: 35px !important;
+  padding: 5px 35px !important;
+  margin-top: 15px;
+}
+
+.moves-container {
+  margin-top: 15px;
+  background-color: #2cf4f4;
+  padding: 10px !important;
+}
+
+.moves-container > h2 {
+  font-size: 10px;
+}
+
+.under-moves-container > div > div > p {
+  font-size: 8px;
+  margin: 5px;
+}
+
+.under-moves-container {
+  display: flex;
+}
+
+.moves-stats {
+  width: 50%;
+  padding: 0px;
+}
+
+.moves-type {
+  height: 20px !important;
+  width: 50%;
+  padding: 0px !important;
+  margin-left: 15px !important;
+  margin-top: 22px !important;
+  display: flex;
+  justify-content: center;
+} 
+
+.moves-type > p {
+  font-size: 8px;
+  color: #ffffff;
+  margin-bottom: -10px !important;
+}
+
+.moves-stats > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#normal {
+  background-color: #a8a878;
+}
+
+#fighting {
+  background-color: #ff501f;
+}
+
+#flying {
+  background-color: #a890f0;
+}
+
+#poison {
+  background-color: #a040a0;
+}
+
+#ground {
+  background-color: #e0c068;
+}
+
+#rock {
+  background-color: #b8a038;
+}
+
+#bug {
+  background-color: #a8b820;
+}
+
+#ghost {
+  background-color: #705898;
+}
+
+#steel {
+  background-color: #b8b8d0;
+}
+
+#fire {
+  background-color: #e24242;
+}
+
+#water {
+  background-color: #5bc7e5;
+}
+
+#grass {
+  background-color: #78c850;
+}
+
+#electric {
+  background-color: #f8d030;
+}
+
+#psychic {
+  background-color: #f85888;
+}
+
+#ice {
+  background-color: #98d8d8;
+}
+
+#dragon {
+  background-color: #c6a114;
+}
+
+#dark {
+  background-color: #705848;
+}
+
+#fairy {
+  background-color: #ee99ac;
+}
+
+#unknown {
+  background-color: #68a090;
+}
+
+#shadow {
+  background-color: #6c3d64;
 }
