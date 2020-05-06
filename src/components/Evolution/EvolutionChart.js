@@ -6,7 +6,18 @@ const EvolutionChart = ({ selectedPokemon }) => {
   const evolution = useEvolution(selectedPokemon);
 
   if (!evolution.species) {
-    return null;
+    return (
+      <div>
+        <div className="nes-container evo-numbers">
+          <p>1</p> <p>2</p> <p>3</p>
+        </div>
+        <div className="chart-container">
+          <EvolutionBox />
+          <EvolutionBox />
+          <EvolutionBox />
+        </div>
+      </div>
+    );
   }
 
   if (!evolution.evolves_to[0]) {

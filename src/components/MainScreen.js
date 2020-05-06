@@ -59,7 +59,22 @@ const MainScreen = ({ selectedPokemon }) => {
   };
 
   if (!pokemon.name && !pokemon.sprites) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <div id="name-screen" className="nes-container">
+          <h1>Loading...</h1>
+        </div>
+        <div id="main-screen" className="nes-container"></div>
+        <div className="btn-container">
+          <button className="nes-btn" id="small-btn">
+            Flip
+          </button>
+          <button className="nes-btn is-warning" id="small-btn">
+            Shiny
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -71,7 +86,9 @@ const MainScreen = ({ selectedPokemon }) => {
         </h1>
         <p>no. {pokemon.id}</p>
       </div>
-      <div id="main-screen" className="nes-container">{renderSprite()}</div>
+      <div id="main-screen" className="nes-container">
+        {renderSprite()}
+      </div>
       <div className="btn-container">
         <button onClick={toggleDirection} className="nes-btn" id="small-btn">
           Flip

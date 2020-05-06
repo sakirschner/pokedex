@@ -46,14 +46,14 @@ const Moves = ({ selectedPokemon, selectedMove }) => {
             <p>{move.pp}</p>
           </div>
         </div>
-        <div>
+        <div className="moves-type-container">
           <div
             className="moves-type nes-container is-rounded"
             id={move.type.name}
           >
             <p>{move.type.name}</p>
           </div>
-          <div>
+          <div className="lvl">
             <p>
               Learned at level{' '}
               {
