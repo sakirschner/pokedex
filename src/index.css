@@ -1,26 +1,26 @@
-#root {
-  padding-top: 20px;
-  background-color: #09a8ff;
-  height: 100vh;
+body {
+  background-color: #09a8ff !important;
 }
 
 #small-btn {
   font-size: 10px;
-  width: 90px;
+  width: 80px;
 }
 
 #small-btn2 {
   font-size: 10px;
   width: 40px;
   margin-left: 10px;
-  margin-top: -60px;
+  margin-top: -53px;
+  height: 30px;
 }
 
 #small-btn3 {
   font-size: 10px;
   width: 40px;
   margin-left: 10px;
-  margin-top: 25px;
+  margin-top: 45px;
+  height: 30px;
 }
 
 .upArrow {
@@ -75,14 +75,16 @@
 }
 
 .pokedex-container {
-  margin: auto;
-  width: 100%;
-  display: flex;
+  margin: 20px auto;
+}
+
+.container {
   justify-content: center;
+  display: flex;
 }
 
 #pokedex-container-left {
-  width: 400px;
+  width: 375px;
   height: 815px;
   background: #e61515;
   padding: 15px;
@@ -90,10 +92,12 @@
 }
 
 #pokedex-container-right {
-  width: 300px;
+  width: 375px;
+  height: 815px;
   background: #e61515;
   padding: 15px;
   display: inline-block;
+  line-height: 0px !important;
 }
 
 #name-screen {
@@ -137,7 +141,7 @@ h1 {
 
 #description > p {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px !important;
 }
 
 #input {
@@ -166,6 +170,7 @@ h1 {
   background-color: #2cf4f4;
   padding: 15px;
   margin-top: 55px;
+  line-height: 15px !important;
 }
 
 .center {
@@ -186,7 +191,6 @@ h1 {
 
 .types > p {
   font-size: 10px;
-  margin-top: -9px;
   color: #ffffff;
   text-align: center;
 }
@@ -214,7 +218,7 @@ h1 {
   margin-top: 10px;
   height: 30px;
   display: flex;
-  padding: 5px !important;
+  padding: 10px !important;
   justify-content: center;
 }
 
@@ -236,8 +240,8 @@ h1 {
   justify-content: space-between !important;
   background-color: #2cf4f4 !important;
   font-size: 12px;
-  height: 35px !important;
-  padding: 5px 35px !important;
+  height: 36px !important;
+  padding: 12px 35px !important;
   margin-top: 15px;
 }
 
@@ -247,6 +251,7 @@ h1 {
   width: 85%;
   display: inline-block;
   margin-top: 15px !important;
+  line-height: 15px !important;
 }
 
 .moves-container > h2 {
@@ -272,7 +277,7 @@ h1 {
 }
 
 .moves-type {
-  height: 20px !important;
+  height: 22px !important;
   width: 85%;
   padding: 0px !important;
   margin-left: 15px !important;
@@ -302,12 +307,13 @@ h1 {
 .info {
   font-size: 12px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 27px;
   margin-left: -100px;
 }
 
 .name {
   width: 145px !important;
+  line-height: 15px;
 }
 
 #normal {
@@ -388,4 +394,15 @@ h1 {
 
 #shadow {
   background-color: #6c3d64;
+}
+
+.logo {
+  width: 65px;
+  margin: 0px 0 15px 75px;
+}
+
+@media only screen and (max-width: 780px) {
+  .pokedex-container {
+    display: grid;
+  }
 }

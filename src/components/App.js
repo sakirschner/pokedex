@@ -49,7 +49,7 @@ const App = () => {
       <div>
         <input
           onChange={handleChange}
-          defaultValue={currentPokemonId}
+          placeholder={currentPokemonId}
           className="nes-input"
           id="input"
         />
@@ -63,6 +63,7 @@ const App = () => {
   };
 
   return (
+    <div className="container">
     <div className="pokedex-container">
       <div id="pokedex-container-left" className="nes-container is-rounded">
         <div className="lights">
@@ -89,13 +90,14 @@ const App = () => {
           </button>
         </div>
       </div>
-      <div id="pokedex-container-left" className="nes-container is-rounded">
+      <div id="pokedex-container-right" className="nes-container is-rounded">
         <Stats selectedPokemon={currentPokemonId} />
         <Types selectedPokemon={currentPokemonId} />
         <EvolutionChart selectedPokemon={currentPokemonId} />
         <Moves selectedPokemon={currentPokemonId} />
         <Info />
       </div>
+    </div>
     </div>
   );
 };
