@@ -23,6 +23,14 @@ const Description = ({ selectedPokemon }) => {
     }
   };
 
+  if (!descriptions) {
+    return (
+      <div id="description" className="nes-container">
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <div id="description" className="nes-container">
       {renderDescription()}

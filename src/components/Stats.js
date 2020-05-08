@@ -5,7 +5,11 @@ const Stats = ({ selectedPokemon }) => {
   const pokemon = usePokemon(selectedPokemon);
 
   if (!pokemon.stats) {
-    return <div className="nes-container" id="stats">Loading...</div>;
+    return (
+      <div className="nes-container" id="stats">
+        Loading...
+      </div>
+    );
   }
 
   return (

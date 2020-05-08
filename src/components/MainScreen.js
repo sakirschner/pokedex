@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import usePokemon from './apis/usePokemon';
+import pokeball from '../img/pokeball.png';
 
 const MainScreen = ({ selectedPokemon }) => {
   const pokemon = usePokemon(selectedPokemon);
@@ -23,7 +24,7 @@ const MainScreen = ({ selectedPokemon }) => {
   };
 
   const renderSprite = () => {
-    if (shiny && direction === 'front') {
+    if (shiny && direction === 'front' && pokemon.sprites.front_shiny) {
       return (
         <img
           src={pokemon.sprites.front_shiny}
@@ -31,7 +32,7 @@ const MainScreen = ({ selectedPokemon }) => {
           className="sprite"
         />
       );
-    } else if (shiny & (direction === 'back')) {
+    } else if (shiny && direction === 'back' && pokemon.sprites.back_shiny) {
       return (
         <img
           src={pokemon.sprites.back_shiny}
@@ -39,7 +40,17 @@ const MainScreen = ({ selectedPokemon }) => {
           className="sprite"
         />
       );
-    } else if (!shiny && direction === 'front') {
+    } else if (!shiny && direction === 'back' && pokemon.sprites.back_default) {
+      return (
+        <img
+          src={pokemon.sprites.back_default}
+          alt={pokemon.name}
+          className="sprite"
+        />
+      );
+    } else if (!pokemon.sprites.front_default) {
+      return <img src={pokeball} alt={pokemon.name} className="sprite" />;
+    } else {
       return (
         <img
           src={pokemon.sprites.front_default}
@@ -47,13 +58,25 @@ const MainScreen = ({ selectedPokemon }) => {
           className="sprite"
         />
       );
-    } else if (!shiny && direction === 'back') {
+    }
+  };
+
+  const renderShiny = () => {
+    if (!shiny) {
       return (
-        <img
-          src={pokemon.sprites.back_default}
-          alt={pokemon.name}
-          className="sprite"
-        />
+        <button
+          onClick={toggleShiny}
+          className="nes-btn is-warning"
+          id="small-btn"
+        >
+          Shiny
+        </button>
+      );
+    } else {
+      return (
+        <button onClick={toggleShiny} className="nes-btn" id="small-btn">
+          Normal
+        </button>
       );
     }
   };
@@ -93,13 +116,7 @@ const MainScreen = ({ selectedPokemon }) => {
         <button onClick={toggleDirection} className="nes-btn" id="small-btn">
           Flip
         </button>
-        <button
-          onClick={toggleShiny}
-          className="nes-btn is-warning"
-          id="small-btn"
-        >
-          Shiny
-        </button>
+        {renderShiny()}
       </div>
     </div>
   );

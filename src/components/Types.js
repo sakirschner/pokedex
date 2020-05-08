@@ -15,7 +15,6 @@ const Types = ({ selectedPokemon }) => {
           <p>{type.type.name}</p>
         </div>
       ))}
-
     </div>
   );
 };
